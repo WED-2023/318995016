@@ -1,7 +1,236 @@
+/*----------------------------- Gemeral page -------------------------------------*/
+
+* 
+{
+	scroll-behavior: smooth;
+	padding: 0;
+	margin: 0; 
+}
+
+/*----------------------------- Background -------------------------------------*/
+
+body 
+{
+	background-color: #e6e2d375;
+}
+
+
+/*----------------------------- menu bar -------------------------------------*/
 #menu
 {
+	background-color:#2dd3e9;
 	position: fixed;
+	padding-top: 0;
+	height: 40px;
 	width: 100%;
-	height: 35px;
-	background: white;
+}
+
+
+#menu a {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	display: inline-flexbox;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 5px;
+	font-size: 20px;
+	color: white;
+	float: left;
+	width: 12%;
+
+  }
+  
+  #menu a:hover {
+	background-color: #2673d842;
+	border-radius: 5%;
+	padding: 0.3%;
+	 
+  }
+
+/*----------------------------- headers -------------------------------------*/
+
+h1{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 35px;
+	color: #2dd3e9;
+	text-align: center;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #ffffff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #2673d842;
+	text-align: center;
+	font-weight: 800;
+	
+}
+h1::before,
+h1::after {
+	background-color: #2673d842;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	content: '';
+	height: 10px;
+	width: 50%;
+}
+
+h1::before {
+	margin-left: -50%;
+	right: 1em;
+}
+
+h1::after {
+	margin-right: -50%;
+	left: 1em;
+} 
+
+/*----------------------------- Home section -------------------------------------*/
+
+.home-img{
+	width: 100vw;
+	height: auto;
+}
+
+/*----------------------------- Description class -------------------------------------*/
+
+
+.description 
+{
+	/* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+	font-family: 'Journal CLM', serif;
+	margin-right: 80px;
+	margin-left: 80px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+}
+/*----------------------------- Photos section -------------------------------------*/
+
+/* Gallery navigation icons */
+.gallery {
+	margin: 10px 50px;
+}
+.gallery img{
+	transition: 1s;
+	padding: 15px;
+	width: 200px;
+}
+.gallery img:hover{
+	filter: grayscale(100%);
+	transform: scale(1.1);
+}
+
+
+
+/*----------------------------- Playlist section -------------------------------------*/
+  
+  .youtube-video {
+	width: 860px;
+	height: 415px;
+	margin: 0 auto;
+	display: block;
+  }
+
+/*----------------------------- like section -------------------------------------*/
+
+h2{
+	text-align: center;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*-----------------------------  QR-code section -------------------------------------*/
+
+.qrcode {
+	margin: 0 auto;
+	display: block;
+  }
+
+/*----------------------------- Q&A section -------------------------------------*/
+
+.ansContainer {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	display: flex;
+	justify-content: space-around; /* Adjusted for better spacing */
+	margin-top: 40px; /* Added margin for better spacing */
+  }
+  
+  .Q1,
+  .Q2 {
+	border: solid white 3px;
+	border-radius: 30px;
+	text-align: center;
+	padding: 10px; /* Combined padding for top and bottom */
+	width: 450px; /* Reduced width for better alignment */
+  }
+  
+  h2 {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 15px; /* Added margin for better spacing */
+  }
+  
+  .section {
+	margin: 20px auto; /* Added margin for better spacing */
+  }
+  
+  
+  .section p {
+	direction: rtl;
+	font-size: 16px; /* Adjusted font size for better readability */
+	line-height: 1.5; /* Adjusted line height for better readability */
+  }
+  
+  p{
+	direction: rtl;
+  }
+
+/*----------------------------- Contact section -------------------------------------*/
+
+/* Style the contact form */
+.contact-form {
+	max-width: 600px;
+	margin: 0 auto;
+	width: 50%;
+	border-radius: 5px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea {
+	display: block;
+	margin-bottom: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+	width: 100%;
+	padding: 5px;
+  }
+  
+
+  .contact-form button[type="submit"], .contact-form button[type="reset"]{
+	background-color:#0d9757;
+	color: #fff;
+	border: none;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 7px;
+	width: calc(30% - 5px); /* Adjusted width for inline display */
+	display: inline-block; /* Display inline */
+	box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  .contact-form button[type="submit"]:hover, .contact-form button[type="reset"]:hover {
+	background-color:  #2673d842;
+  }
+  
+  
+/*----------------------------- end section -------------------------------------*/
+
+.end-img{
+	max-height: 60vh;
+	width: 100%;
 }
