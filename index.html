@@ -1,179 +1,264 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <title>My Grandma</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  
+  <!-- emoji -->
+  <script src="https://cdn.tiny.cloud/1/6i3ksrxbpxmuzc7con0jvh08t8p7jc0drad32y4c8tihzbsf/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: "#message",
+      plugins: "emoticons",
+      toolbar: "emoticons",
+      toolbar_location: "bottom",
+      menubar: false
+    });
+    </script>
+  <!-- /emoji -->
+  </script>
+
+  <script>
+    function sendEmail() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = tinymce.get('message').getContent({format : 'text'});
+
+      const mailtoLink = `mailto:${email}?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+      window.location.href = mailtoLink;
+    
+      // Prevent form submission
+      return false;
+    }
+    </script>
 </head>
+
+
+<!----------------------------------------------------    Navigation Bar    ------------------------------------------------------------->
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
+  <div id="menu">
+    <b>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#photos">My Photos</a>
+      <a href="#playlist">My Playlist</a>
+      <a href="#like">Like</a></li>
+      <a href="#qrcoder">QR code</a>
+      <a href="#spa">Q&A</a>
+      <a href="#contact">Contact Me</a>
+    </b>
+  </div>
+		 
+<!----------------------------------------------------    Home section   ------------------------------------------------------------->
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+  <section id="home" class="section">
+    <br/>
+    <picture>
+      <img class="home-img" src="images\grandma-home.jpg">
+    </picture>
+  </section>
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
+<!----------------------------------------------------    About section    ------------------------------------------------------------->
+
+  <section id="about" class="section">
+    <br/>
+    <br/>
+    <h1><b>About me</b></h1>
+    <br/>
+    <br/>
+    <div class="description">
+      <p dir="rtl">
+        להשלים טקסט על סבתוש
+      </p>
+    </div>
+  </section>
+
+<!----------------------------------------------------    Photos section    ------------------------------------------------------------->
+
+  <section id="photos" class="section">
+    <br/>
+    <br/>
+    <h1><b>My photos</b></h1>
+    <div class="gallery">
+      <div class="photo">
+        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
+        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
+        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
+        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
+        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
+    </div>
+  </section>
+
+<!----------------------------------------------------    Playlist section    ------------------------------------------------------------->
+
+  <section id="playlist" class="section">
+    <br/>
+    <br/>
+    <h1><b>My playlist</b></h1>
+    <div class="description">
+      <p dir="rtl">
+        הסבר
+      </p>
+    </div>
+    <br />
+    <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/Mgebc3uR6B8?si=Kio4StDyqurlQtPt" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </section>
+
+<!----------------------------------------------------    Like section    ------------------------------------------------------------->
 
 <section id="like" class="section">
 <br/>
 <br/>
+<h1><b>Give me a like</b></h1>
+<h2>If you enjoy this site, please click the like button and share it with your friends!</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+<div class="iframe-container">
+  <iframe class="like-share" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwed-2023.github.io%2F318995016%2F&width=450&layout&action&size&share=true&height=35&appId" 
+  width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+ 
+</div>
 </section>
+<!----------------------------------------------------    QR-code section    ------------------------------------------------------------->
 
 <section id="qrcoder" class="section">
 <br/>
 <br/>
+<h1><b>Scan my code</b></h1>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
+<img class="qrcode" src="images/QR-Code.png" width="250" height="350">
 </section>
+
+<!----------------------------------------------------    Q&A section    ------------------------------------------------------------->
 
 <section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
+  <br />
+  <br />
+  <h1>Questions and Answers</h1>
+  <br />
+  <br />
+  <h2 dir="rtl">שלושה הבדלים עיקריים בין web1, web2 ו web3:</h2>
+  <ol>
+    <li>
+      <p></p>
+      <div class="ansContainer">
+        <div class="Q1">
+          <h2>WEB 1.0</h2>
+          <br />
+          <p>
+            <i class="fas fa-globe"></i> מיליוני משתמשים
+            <br />
+            <br />
+            <i class="fab fa-internet-explorer"></i> האינטרנט" לקריאה בלבד"
+            <br />
+            <br />
+            <i class="fab fa-chrome"></i> מחבר מידע - האינטרנט
+            <br />
+            <br />
+            <i class="fas fa-globe-americas"></i> מחבר סטטי - אינטראקציה חד כיוונית
+          </p>
+        </div>
+        <div class="Q1">
+          <h2>WEB 2.0</h2>
+          <br />
+          <p>
+            <i class="fas fa-globe"></i> מיליארדי משתמשים
+            <br />
+            <br />
+            <i class="fab fa-internet-explorer"></i> האינטרנט" לכתיבה וקריאה"
+            <br />
+            <br />
+            <i class="fab fa-chrome"></i> מחבר אנשים - רשת חברתית
+            <br />
+            <br />
+            <i class="fas fa-globe-americas"></i> תקשורת דו כיוונית וגישה שיתופית
+          </p>
+        </div>
+        <div class="Q1">
+          <h2>WEB 3.0</h2>
+          <br />
+          <p>
+            <i class="fas fa-globe"></i> טריליוני משתמשים
+            <br />
+            <br />
+            <i class="fab fa-internet-explorer"></i> האינטרנט "לקריאה, כתיבה והרצת קוד"
+            <br />
+            <br />
+            <i class="fab fa-chrome"></i> מחבר ידע - אינטרנט של נתונים
+            <br />
+            <br />
+            <i class="fas fa-globe-americas"></i> חוויית משתמש אישית - באמצעות כלים של AI
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <br />
+      <h2 dir="rtl">דוגמא של תרחיש שימוש- חיפוש השאילתה "אוניברסיטת בן גוריון":</h2>
+      <div class="ansContainer">
+        <div class="Q2">
+          <h2>WEB 1.0</h2>
+          <br />
+          <p>
+            המשתמש מכניס כתובת URL ספציפית ומקבל אתר אינטרט
+          </p>
+        </div>
+        <div class="Q2">
+          <h2>WEB 2.0</h2>
+          <br />
+          <p>
+            המשתמש רושם "בן גוריון אוניברסיטה" כשאילתה במנוע חיפוש ומקבל תוצאות רלוונטיות
+          </p>
+        </div>
+        <div class="Q2">
+          <h2>WEB 3.0</h2>
+          <br />
+          <p>
+            המשתמש רושם "בן גוריון אוניברסיטה" כשאילתה במנוע חיפוש ומקבל תוצאות רלוונטיות ומדוייקות יותר  
+          </p>
+        </div>
+      </div>
+    </li>
+  </ol>
 </section>
 
+
+<!----------------------------------------------------    Contact section    ------------------------------------------------------------->
+
+
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+  <br/>
+  <br/>
+  <h1><b>Contact Me</b></h1>
+  <br/>
+  <br/>
+  <div class="contact-form">
+    <form id="emailForm" method="POST" onsubmit="return sendEmail()">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" placeholder="Your Name *" required><br>
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="Your Mail *" required><br>
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" placeholder="This is the place to tell us what you think"></textarea><br>
+      <button type="submit" >SEND MESSAGE</button>
+      <button type="reset">RESET</button>
+    </form>
+  </div>
 </section>
+
+<!----------------------------------------------------    end section    ------------------------------------------------------------->
+
+<section id="end" class="section">
+  <br/>
+  <picture>
+    <img class="end-img" src="images/end-image.png">
+  </picture>
+</section>
+
+<!----------------------------------------------------    JS section    ------------------------------------------------------------->
 
 
 <script type="text/javascript">
@@ -188,6 +273,7 @@ $(function(){
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
+
  </script>
 </body>
 </html>
