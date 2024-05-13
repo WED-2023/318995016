@@ -3,8 +3,14 @@
 * 
 {
 	scroll-behavior: smooth;
-	padding: 0;
-	margin: 0; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* This will prevent horizontal scrolling */
+}
+
+.container {
+    width: 100vw; /* Set the width to 100% of the viewport width */
+    overflow: hidden; /* This will hide any content that exceeds the viewport width */
 }
 
 /*----------------------------- Background -------------------------------------*/
@@ -25,8 +31,14 @@ body
 	width: 100%;
 }
 
+#menu i {
+	margin-right: 5px; /* Add a small gap between the icon and the text */
+	position: relative;
+	top: 2px; /* Move the icon down by 2px */
+	left: -2px; /* Move the icon left by 2px */
+}
 
-#menu a {
+#menu a, #menu img {
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	display: inline-flexbox;
 	text-decoration: none;
@@ -35,15 +47,19 @@ body
 	font-size: 20px;
 	color: white;
 	float: left;
-	width: 12%;
+	width: 11.5%;
 
   }
   
-  #menu a:hover {
+  #menu a:hover , #menu img:hover{
 	background-color: #2673d842;
 	border-radius: 5%;
 	padding: 0.3%;
 	 
+  }
+  #menu img{
+	width: 100px;
+	height: 30px;
   }
 
 /*----------------------------- headers -------------------------------------*/
@@ -83,7 +99,7 @@ h1::after {
 
 .home-img{
 	width: 100vw;
-	height: auto;
+	height: 600px;
 }
 
 /*----------------------------- Description class -------------------------------------*/
@@ -108,7 +124,8 @@ h1::after {
 .gallery img{
 	transition: 1s;
 	padding: 15px;
-	width: 200px;
+	width: 300px;
+	height: 300px;
 }
 .gallery img:hover{
 	filter: grayscale(100%);
@@ -145,44 +162,44 @@ h2{
   }
 
 /*----------------------------- Q&A section -------------------------------------*/
-
 .ansContainer {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	display: flex;
-	justify-content: space-around; /* Adjusted for better spacing */
-	margin-top: 40px; /* Added margin for better spacing */
-  }
-  
-  .Q1,
-  .Q2 {
-	border: solid white 3px;
-	border-radius: 30px;
-	text-align: center;
-	padding: 10px; /* Combined padding for top and bottom */
-	width: 450px; /* Reduced width for better alignment */
-  }
-  
-  h2 {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	text-align: center;
-	font-weight: bold;
-	margin-top: 15px; /* Added margin for better spacing */
-  }
-  
-  .section {
-	margin: 20px auto; /* Added margin for better spacing */
-  }
-  
-  
-  .section p {
-	direction: rtl;
-	font-size: 16px; /* Adjusted font size for better readability */
-	line-height: 1.5; /* Adjusted line height for better readability */
-  }
-  
-  p{
-	direction: rtl;
-  }
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: space-around; /* Adjusted for better spacing */
+    margin-top: 40px; /* Added margin for better spacing */
+}
+
+.Q1,
+.Q2 {
+    background-color: white; /* Set background color to white for tablets effect */
+    border: solid #2673d842 3px; /* Set border color to green */
+    border-radius: 10px; /* Adjusted border radius for a smoother tablet effect */
+    text-align: center;
+    padding: 10px; /* Combined padding for top and bottom */
+    width: 450px; /* Reduced width for better alignment */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added shadow for a 3D effect */
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px; /* Added margin for better spacing */
+}
+
+.section {
+    margin: 20px auto; /* Added margin for better spacing */
+}
+
+.section p {
+    direction: rtl;
+    font-size: 16px; /* Adjusted font size for better readability */
+    line-height: 1.5; /* Adjusted line height for better readability */
+}
+
+p {
+    direction: rtl;
+}
 
 /*----------------------------- Contact section -------------------------------------*/
 
@@ -193,39 +210,42 @@ h2{
 	width: 50%;
 	border-radius: 5px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align: center; /* Center align the form contents */
+}
 
-  }
-  
-  .contact-form label,
-  .contact-form input,
-  .contact-form textarea {
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
 	display: block;
 	margin-bottom: 10px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+.contact-form input,
+.contact-form textarea {
 	width: 100%;
 	padding: 5px;
-  }
-  
+}
 
-  .contact-form button[type="submit"], .contact-form button[type="reset"]{
-	background-color:#0d9757;
+.contact-form button[type="submit"],
+.contact-form button[type="reset"] {
+	background-color: #0d9757;
 	color: #fff;
 	border: none;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	padding: 10px 20px;
+	padding: 12px 10px;
 	cursor: pointer;
 	border-radius: 7px;
-	width: calc(30% - 5px); /* Adjusted width for inline display */
-	display: inline-block; /* Display inline */
+	width: calc(30% - 5px); /* Set the width of each button to 50% of the container width minus 5px for margin */
+	margin: 0 5px; /* Add a small margin between buttons */
 	box-sizing: border-box; /* Include padding and border in width calculation */
-  }
-  
-  .contact-form button[type="submit"]:hover, .contact-form button[type="reset"]:hover {
-	background-color:  #2673d842;
-  }
+	display: inline-block; /* Display buttons next to each other */
+}
+
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="reset"]:hover {
+	background-color: #2673d842;
+}
+
   
   
 /*----------------------------- end section -------------------------------------*/

@@ -3,7 +3,11 @@
 <head>
   <title>My Grandma</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-  
+  <!-- gramdma icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/grandma-icon.png" />
+  <!-- icons css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <!-- emoji -->
   <script src="https://cdn.tiny.cloud/1/6i3ksrxbpxmuzc7con0jvh08t8p7jc0drad32y4c8tihzbsf/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
   <script>
@@ -18,6 +22,7 @@
   <!-- /emoji -->
   </script>
 
+  <!-- get detail from the form and send email function -->
   <script>
     function sendEmail() {
       const name = document.getElementById('name').value;
@@ -31,6 +36,7 @@
       return false;
     }
     </script>
+
 </head>
 
 
@@ -38,14 +44,16 @@
 <body>
   <div id="menu">
     <b>
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#photos">My Photos</a>
-      <a href="#playlist">My Playlist</a>
-      <a href="#like">Like</a></li>
-      <a href="#qrcoder">QR code</a>
-      <a href="#spa">Q&A</a>
-      <a href="#contact">Contact Me</a>
+      <img src="images/grandma-icon.png">
+      <a href="#home"><i class="fas fa-home"></i>Home</a>
+      <a href="#about"><i class="fas fa-user"></i>About Me</a>
+      <a href="#photos"><i class="fas fa-camera"></i>My Photos</a>
+      <a href="#playlist"><i class="fas fa-music"></i>My Playlist</a>
+      <a href="#like"><i class="fas fa-thumbs-up"></i>Like</a></li>
+      <a href="#qrcoder"><i class="fas fa-qrcode"></i>QR code</a>
+      <a href="#spa"><i class="fas fa-question-circle"></i>Q&A</a>
+      <a href="#contact"><i class="fas fa-envelope"></i>Contact Me</a>
+      
     </b>
   </div>
 		 
@@ -68,8 +76,17 @@
     <br/>
     <div class="description">
       <p dir="rtl">
-        להשלים טקסט על סבתוש
-      </p>
+         סבתא שלי היא אישה מיוחדת, שמביאה איתה מסורת עממית וחמימות מתימן.
+        היא מתעניינת באמנות ובאוכל, ומשקיעה את ליבה ואהבתה בהכנת המאכלים ובאירוח המשפחתי.
+        <br/>
+
+         המשפחה היא העולם שלה, והיא נותנת להם את כל מה שיש בה להציע. עם זאת, היא לא רק גורמת לאחרים להרגיש בבית, 
+         אלא גם משמחת ומעניינת, תמיד מוכנה להקשיב ולתת עצות חכמות.
+         <br/>
+ 
+         ההשפעה החיובית של אמה ובעלה (סבי) היתה  משמעותית וחשובה בחייה מאוד
+         , סבתי מסוגלת ליצור אווירה חמה ומרגשת בכל מקום שהיא נמצאת בו.      
+        </p>
     </div>
   </section>
 
@@ -80,11 +97,9 @@
     <br/>
     <h1><b>My photos</b></h1>
     <div class="gallery">
-      <div class="photo">
-        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
-        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
-        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
-        <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
+        <a href="images/image1.jpg"><img src ="images/image1.jpg"></a>
+        <a href="images/image2.jpg"><img src ="images/image2.jpg"></a>
+        <a href="images/image3.jpg"><img src ="images/image3.jpg"></a>
         <a href="images\grandma-home.jpg"><img src ="images\grandma-home.jpg"></a>
     </div>
   </section>
@@ -96,9 +111,8 @@
     <br/>
     <h1><b>My playlist</b></h1>
     <div class="description">
-      <p dir="rtl">
-        הסבר
-      </p>
+      <br/>
+
     </div>
     <br />
     <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/Mgebc3uR6B8?si=Kio4StDyqurlQtPt" title="YouTube video player" 
@@ -113,13 +127,11 @@
 <br/>
 <br/>
 <h1><b>Give me a like</b></h1>
-<h2>If you enjoy this site, please click the like button and share it with your friends!</h2>
+<br/>
+<h2>If you like my website, please Like and Share! 💗</h2>
 <br/>
 <div class="iframe-container">
-  <iframe class="like-share" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwed-2023.github.io%2F318995016%2F&width=450&layout&action&size&share=true&height=35&appId" 
-  width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
- 
-</div>
+  <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwed-2023.github.io%2F318995016%2F&width=450&layout&action&size&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
 </section>
 <!----------------------------------------------------    QR-code section    ------------------------------------------------------------->
 
@@ -128,6 +140,7 @@
 <br/>
 <h1><b>Scan my code</b></h1>
 <br/>
+<h2>If you want to share my website, scan the code 💗</h2>
 <br/>
 <img class="qrcode" src="images/QR-Code.png" width="250" height="350">
 </section>
@@ -149,48 +162,50 @@
           <h2>WEB 1.0</h2>
           <br />
           <p>
-            <i class="fas fa-globe"></i> מיליוני משתמשים
+            בשלב זה החלו להתבסס הטכנולוגיות של ה-WEB.
             <br />
             <br />
-            <i class="fab fa-internet-explorer"></i> האינטרנט" לקריאה בלבד"
+            עיצוב האתרים היה מאוד בסיסי, לא אינטראקטיבי.
             <br />
             <br />
-            <i class="fab fa-chrome"></i> מחבר מידע - האינטרנט
+            האתרים היו סטטיים.בכל פעם שצריך לעדכן את הדף, זה צריך להיעשות פיזית (שמור את הדף), לכן עדכונים בוצעו פעם בהרבה זמן.
             <br />
             <br />
-            <i class="fas fa-globe-americas"></i> מחבר סטטי - אינטראקציה חד כיוונית
+            האינטרנט" לקריאה בלבד"
           </p>
         </div>
         <div class="Q1">
           <h2>WEB 2.0</h2>
           <br />
           <p>
-            <i class="fas fa-globe"></i> מיליארדי משתמשים
+            באותה תקופה היו טכנולוגיות שאפשרו אתרים דינמיים, שיתופיים וחברתיים יותר.
+            (ויקיפדיה הוא אתר הדגל של עידן WEB 2.0).
             <br />
             <br />
-            <i class="fab fa-internet-explorer"></i> האינטרנט" לכתיבה וקריאה"
+            השינוי הגדול בהשוואה ל-WEB 1.0 הוא לאפשר למשתמשים לשתף ולערוך תוכן.
             <br />
             <br />
-            <i class="fab fa-chrome"></i> מחבר אנשים - רשת חברתית
+            בתקופה זו ניתן היה לפתח DB בצד השרת, שאפשר למשתמשים להירשם לאתרים ולשמור סיסמאות.
             <br />
             <br />
-            <i class="fas fa-globe-americas"></i> תקשורת דו כיוונית וגישה שיתופית
+            האינטרנט לקריאה וכתיבה -תקשורת דו כיוונית וגישה שיתופית
           </p>
         </div>
         <div class="Q1">
           <h2>WEB 3.0</h2>
           <br />
           <p>
-            <i class="fas fa-globe"></i> טריליוני משתמשים
+            באותה תקופה היו טכנולוגיות שאפשרו שימוש ב-AI ועיבוד שפה טבעית.
             <br />
             <br />
-            <i class="fab fa-internet-explorer"></i> האינטרנט "לקריאה, כתיבה והרצת קוד"
+            חוויית משתמש אישית - באמצעות כלים של AI.החידושים בתקופה זו הם: IOT, ענן.
             <br />
             <br />
-            <i class="fab fa-chrome"></i> מחבר ידע - אינטרנט של נתונים
+            המידע המוצג באתרים הינו לאחר עיבוד, ניתוח והבנה.
             <br />
             <br />
-            <i class="fas fa-globe-americas"></i> חוויית משתמש אישית - באמצעות כלים של AI
+             האינטרנט "לקריאה, כתיבה והרצת קוד"
+
           </p>
         </div>
       </div>
@@ -203,21 +218,28 @@
           <h2>WEB 1.0</h2>
           <br />
           <p>
-            המשתמש מכניס כתובת URL ספציפית ומקבל אתר אינטרט
+            המשתמש מכניס כתובת URL ספציפית ומקבל אתר אינטרט.
+            אין מנועי חיפוש כי אין טכנולוגיה קיימת שיודעת לבצע חיפוש.
+היו אתרים בסגנון "דפי זהב" שבהם היינו צריכים לחפש בעצמנו את המידע המבוקש.
+עליך לדעת את כתובת האתר של דף כדי להגיע אליו.
           </p>
         </div>
         <div class="Q2">
           <h2>WEB 2.0</h2>
           <br />
           <p>
-            המשתמש רושם "בן גוריון אוניברסיטה" כשאילתה במנוע חיפוש ומקבל תוצאות רלוונטיות
+            המשתמש רושם "בן גוריון אוניברסיטה" כשאילתה במנוע חיפוש ומקבל תוצאות רלוונטיות.
+            בתקופה זו ניתן לשאול שאלות באתרי אינטרנט כמו גוגל וניתן לקבל את כל התכנים הקיימים בנושא השאלה אך לאו דווקא את התשובה עצמה.
+נצטרך לחפש את המידע הרלוונטי לנו בעצמנו בין כל התוצאות המוצגות.
           </p>
         </div>
         <div class="Q2">
           <h2>WEB 3.0</h2>
           <br />
           <p>
-            המשתמש רושם "בן גוריון אוניברסיטה" כשאילתה במנוע חיפוש ומקבל תוצאות רלוונטיות ומדוייקות יותר  
+            המשתמש רושם "בן גוריון אוניברסיטה" כשאילתה במנוע חיפוש ומקבל תוצאות רלוונטיות ומדוייקות יותר.
+            בתקופה זו תוכלו לשאול שאלות באתרים והתשובה שתקבלו תהיה תשובה מעובדת על ידי AI ו-NLP.
+כל התוצאות שאנו צריכים יוצגו ברשימה אחת וידורגו.
           </p>
         </div>
       </div>
