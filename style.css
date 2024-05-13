@@ -35,7 +35,7 @@ body
 	margin-right: 5px; /* Add a small gap between the icon and the text */
 	position: relative;
 	top: 2px; /* Move the icon down by 2px */
-	left: -2px; /* Move the icon left by 2px */
+	left: -4px; /* Move the icon left by 2px */
 }
 
 #menu a, #menu img {
@@ -58,7 +58,7 @@ body
 	 
   }
   #menu img{
-	width: 100px;
+	width: 30px;
 	height: 30px;
   }
 
