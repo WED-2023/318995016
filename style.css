@@ -228,7 +228,7 @@ p {
 
 .contact-form button[type="submit"],
 .contact-form button[type="reset"] {
-	background-color: #2673d842;
+	background-color: #4436c4ea;
 	color: #fff;
 	border: none;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -243,7 +243,7 @@ p {
 
 .contact-form button[type="submit"]:hover,
 .contact-form button[type="reset"]:hover {
-	background-color: #52678342;
+	background-color: #2bb6c542;
 }
 
   
