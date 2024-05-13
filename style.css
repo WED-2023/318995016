@@ -120,6 +120,8 @@ h1::after {
 /* Gallery navigation icons */
 .gallery {
 	margin: 10px 50px;
+	display: flex;
+	justify-content: center;
 }
 .gallery img{
 	transition: 1s;
